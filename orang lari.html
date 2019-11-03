@@ -2,7 +2,7 @@
 <head>
 	<title>UTS</title>	
 </head>
-	<p>Arahkan mouse dimana saja untuk membuat arah untuk gambar.. </p>
+	<p>Klik mouse dimana saja untuk membuat arah untuk gambar.. </p>
 <body>
 	<canvas id=mycanvas style="background : #f2d905" ></canvas>
 	<script> 
@@ -55,7 +55,7 @@
 		var myorang = this.oranglist [this.orangpos];
 		
 		if(this.orangxDes > this.orangxpos){
-			this.orangxpos +=15; 
+			this.orangxpos +=10; 
 			if(this.flipped){
 				this.context.translate(this.canvas.width, 0);
 				this.context.scale(-1,1);
@@ -63,7 +63,7 @@
 			}
 			
 		} else if(this.orangxDes < this.orangxpos){
-			this.orangxpos -=15; 
+			this.orangxpos -=10; 
 			
 			if(!this.flipped){
 				this.context.translate(this.canvas.width, 0);
@@ -79,9 +79,9 @@
 		
 		var selisihy =  Math.abs( this.orangypos -  this.orangyDes);
 		
-		var langkahya = (selisihx > 0)?  selisihy / (selisihx / 15) : 15;
+		var langkahya = (selisihx > 0)?  selisihy / (selisihx / 10) : 10;
 		
-		if(selisihy < 15){
+		if(selisihy < 10){
 			this.orangypos = this.orangyDes;
 		}
 		
